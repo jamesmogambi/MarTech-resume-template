@@ -377,59 +377,146 @@ export const FUNNEL_STAGES_DEMO = [
 
 // ─── Insights ───────────────────────────────────────────────────────────────────
 
-export const INSIGHTS = [
+export interface Insight {
+  id: number;
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  readTime: string;
+  color: string;
+}
+
+export interface ArticleSection {
+  heading: string;
+  content: string[];
+}
+
+export interface ArticleContent {
+  introduction: string[];
+  sections: ArticleSection[];
+  keyTakeaways: string[];
+}
+
+export const INSIGHTS: Insight[] = [
   {
     id: 1,
-    title: "GA4 vs Universal Analytics: What Marketers Need to Know",
+    slug: "ga4-events-practical-guide-marketing-measurement",
+    title: "GA4 Events: A Practical Guide to Marketing Measurement",
     excerpt:
-      "The move to GA4 isn't just a platform upgrade — it's a fundamental shift in how events are modelled and sessions counted. Here's how to navigate it without losing historical context.",
+      "GA4 works best when events are designed around meaningful customer actions rather than simply tracking page views. This guide explains how to build an event framework that connects user behavior to marketing goals.",
     category: "Analytics",
-    readTime: "7 min read",
+    readTime: "8 min read",
     color: "#00d9b7",
   },
   {
     id: 2,
-    title: "Building a Clean GTM Architecture at Scale",
+    slug: "building-marketing-measurement-plan",
+    title: "Building a Marketing Measurement Plan from Scratch",
     excerpt:
-      "Tag sprawl is a silent killer of data quality. A well-governed Tag Manager setup starts with a clear data layer contract, a strict naming convention, and version-controlled container management.",
-    category: "Tracking",
+      "Before implementing GA4, GTM, or advertising pixels, marketers need to define what success looks like. A measurement plan connects business objectives to KPIs, events, data sources, and reporting.",
+    category: "Marketing Analytics",
     readTime: "9 min read",
     color: "#4d90fe",
   },
   {
     id: 3,
-    title: "The Modern Technical SEO Audit: From Crawl to CWV",
+    slug: "clean-gtm-architecture",
+    title: "Building a Clean GTM Architecture at Scale",
     excerpt:
-      "Today's SEO audits go well beyond 404s and redirects. Core Web Vitals, structured data, crawl budget, and content quality signals all need systematic assessment.",
-    category: "SEO",
-    readTime: "11 min read",
+      "A scalable Google Tag Manager implementation is more than adding tags whenever marketing needs new tracking. Naming conventions, triggers, variables, data layers, testing, and governance all contribute to reliable marketing data.",
+    category: "Tracking",
+    readTime: "9 min read",
     color: "#a78bfa",
   },
   {
     id: 4,
-    title: "Designing a MarTech Stack for Growth-Stage Brands",
+    slug: "utm-tracking-campaign-naming-convention",
+    title: "UTM Tracking: How to Build a Campaign Naming Convention",
     excerpt:
-      "Most teams buy tools before defining processes. The right approach starts with the customer journey, maps data needs to each stage, then selects technology to support — not lead — the strategy.",
-    category: "MarTech",
-    readTime: "8 min read",
-    color: "#f59e0b",
+      "Consistent UTM parameters make campaign reporting easier and reduce attribution problems. This guide explains how to create a practical naming convention for paid media, email, social, and other marketing channels.",
+    category: "Analytics",
+    readTime: "7 min read",
+    color: "#f97316",
   },
   {
     id: 5,
-    title: "Customer Journey Mapping: From Touchpoint to Revenue",
+    slug: "designing-measurable-marketing-funnel",
+    title: "From Click to Conversion: Designing a Measurable Marketing Funnel",
     excerpt:
-      "Understanding the modern customer journey requires connecting ad impressions to CRM records to revenue. This guide covers the methodology and tools to map it end-to-end.",
+      "A campaign isn't measured by clicks alone. Marketers need to understand what happens after the click and identify where prospects drop out of the funnel.",
     category: "Strategy",
-    readTime: "10 min read",
+    readTime: "8 min read",
     color: "#10b981",
   },
   {
     id: 6,
-    title: "UTM Parameters: A Framework for Clean Attribution",
+    slug: "customer-journey-mapping-digital-marketers",
+    title: "Customer Journey Mapping for Digital Marketers",
     excerpt:
-      "Bad UTM hygiene corrupts attribution models and makes channel reporting unreliable. A consistent naming convention and governance policy aren't optional — they're the foundation of analytics.",
-    category: "Analytics",
-    readTime: "6 min read",
+      "Customers rarely move from seeing an ad directly to making a purchase. Mapping the journey across search, social, websites, email, CRM, and conversion points helps marketers understand the full path to revenue.",
+    category: "Customer Journey",
+    readTime: "9 min read",
+    color: "#4d90fe",
+  },
+  {
+    id: 7,
+    slug: "measure-meta-ads-beyond-ctr",
+    title: "How to Measure a Meta Ads Campaign Beyond CTR",
+    excerpt:
+      "CTR is useful, but it doesn't tell you whether a campaign is generating valuable customers. A stronger measurement framework connects ad engagement to landing-page behavior, conversions, cost, and revenue.",
+    category: "Paid Media",
+    readTime: "7 min read",
+    color: "#a78bfa",
+  },
+  {
+    id: 8,
+    slug: "retargeting-website-intent-conversions",
+    title: "Retargeting: Turning Website Intent Into Conversions",
+    excerpt:
+      "Not every website visitor is ready to convert on their first visit. Retargeting allows marketers to build audiences based on behavioral signals and deliver relevant messages at different stages of the customer journey.",
+    category: "Paid Media",
+    readTime: "8 min read",
+    color: "#f59e0b",
+  },
+  {
+    id: 9,
+    slug: "crm-segmentation-guide",
+    title: "CRM Segmentation: Moving Beyond One Message for Everyone",
+    excerpt:
+      "Effective CRM marketing starts with understanding that customers have different needs, behaviors, and levels of intent. Segmentation allows marketers to deliver more relevant experiences and measure each audience independently.",
+    category: "CRM",
+    readTime: "8 min read",
+    color: "#00d9b7",
+  },
+  {
+    id: 10,
+    slug: "email-automation-lifecycle-journey",
+    title: "Email Automation: Designing a Lifecycle Journey",
+    excerpt:
+      "Email automation becomes more powerful when messages are triggered by customer behavior rather than sent on a fixed schedule. This guide explains how to design a lifecycle journey from signup through retention.",
+    category: "Email Marketing",
+    readTime: "8 min read",
+    color: "#4d90fe",
+  },
+  {
+    id: 11,
+    slug: "technical-seo-vs-content-seo",
+    title: "Technical SEO vs Content SEO: What Should Marketers Prioritize?",
+    excerpt:
+      "SEO isn't just about keywords. Strong organic performance requires a combination of technical foundations, useful content, search intent, internal linking, and a website that provides a good user experience.",
+    category: "SEO",
+    readTime: "8 min read",
+    color: "#a78bfa",
+  },
+  {
+    id: 12,
+    slug: "generative-ai-digital-marketing",
+    title: "Using Generative AI in Digital Marketing Without Losing Strategy",
+    excerpt:
+      "Generative AI can accelerate content creation, research, personalization, and analysis, but effective marketing still requires human judgment. This guide explores practical ways marketers can use AI while maintaining strategic oversight.",
+    category: "AI & Marketing",
+    readTime: "7 min read",
     color: "#f97316",
   },
 ];
