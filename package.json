@@ -1,5 +1,5 @@
 {
-  "name": "@figma/my-make-file",
+  "name": "@figma/martech-digital-marketing-portfolio",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -89,6 +89,6 @@
   },
   "description": "This is a code bundle for MarTech Digital Marketing Portfolio. The original project is available at https://www.figma.com/design/s2lh1qCKZtkACzwxpm4WSk/MarTech-Digital-Marketing-Portfolio.",
   "main": "index.js",
-  "author": "",
+  "author": "James Mogambi",
   "license": "ISC"
 }
