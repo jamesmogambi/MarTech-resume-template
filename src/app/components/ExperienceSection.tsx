@@ -3,7 +3,7 @@ import { SectionLabel, SectionHeading } from "./ui";
 export function ExperienceSection() {
   const experience = [
     {
-      role: "Freelance MarTech Specialist",
+      role: " MarTech Specialist",
       type: "Self-employed — Consulting",
       period: "Ongoing",
       description:
