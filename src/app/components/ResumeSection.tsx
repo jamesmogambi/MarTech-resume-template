@@ -30,7 +30,9 @@ export function ResumeSection() {
             </div>
 
             <a
-              href="#contact"
+              href="https://app.enhancv.com/share/25fabfef/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-base hover:opacity-90 transition-opacity"
               style={{ background: "#00d9b7", color: "#080c1a" }}
             >

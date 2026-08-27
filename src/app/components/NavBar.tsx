@@ -55,7 +55,9 @@ export function NavBar({ active, mobile, setMobile }: NavBarProps) {
               Let&apos;s talk
             </a>
             <a
-              href="#resume"
+              href="https://app.enhancv.com/share/25fabfef/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm font-bold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
               style={{ background: "#00d9b7", color: "#080c1a" }}
             >
@@ -95,8 +97,9 @@ export function NavBar({ active, mobile, setMobile }: NavBarProps) {
           ))}
           <div className="pt-3">
             <a
-              href="#resume"
-              onClick={() => setMobile(false)}
+              href="https://app.enhancv.com/share/25fabfef/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm font-bold px-4 py-2.5 rounded-lg w-full justify-center"
               style={{ background: "#00d9b7", color: "#080c1a" }}
             >
