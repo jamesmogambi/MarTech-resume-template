@@ -80,22 +80,25 @@ export function ContactSection() {
                 {
                   icon: <Mail className="w-5 h-5" />,
                   label: "Email",
-                  value: "jamesmg@cabsandmore.com",
+                  value: "mugambijames96@gmail.com",
                   href: "mailto:mugambijames96@gmail.com",
                   color: "#00d9b7",
+                  external: false,
                 },
-                // { icon: <Linkedin className="w-5 h-5" />, label: "LinkedIn", value: "linkedin.com/in/james-mogambi", href: "#", color: "#4d90fe" },
                 {
                   icon: <Github className="w-5 h-5" />,
                   label: "GitHub",
                   value: "github.com/jamesmogambi",
-                  href: "#",
+                  href: "https://github.com/jamesmogambi",
                   color: "#a78bfa",
+                  external: true,
                 },
               ].map((contact) => (
                 <a
                   key={contact.label}
                   href={contact.href}
+                  target={contact.external ? "_blank" : undefined}
+                  rel={contact.external ? "noopener noreferrer" : undefined}
                   className="flex items-center gap-4 p-4 rounded-xl border transition-colors group"
                   style={{
                     background: "rgba(255,255,255,0.02)",
